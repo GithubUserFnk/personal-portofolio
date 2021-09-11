@@ -1,0 +1,254 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Portofolio Fakhri</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,900&display=swap" rel="stylesheet"> 
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/42400b9feb.js" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap CDN and external CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static '/css/style.css' %}">
+  <link rel="shortcut icon" href="{% static '/image/Rocket.svg' %}" type="image/x-icon">
+  
+  </head>
+<body>
+        <!-- Navbar dan Banner -->
+        <section id="main">
+            <div class="container">
+              <!-- Navbar Here -->
+              <nav class="navbar navbar-expand-lg navbar-dark bg-transparent pt-5">
+                <a class="navbar-brand logo" href="{% url 'home' %}"><img src="{% static '/image/logo.png' %}" alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#project">Projects</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#contact">Contact Me</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="{% url 'bloger:blog' %}">Blog</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+      
+            <div class="container">
+                  <div class="row header-main">
+                          <div class="col-md-6 deskripsi">
+                              <h1>Hello, my name is Fakhri W.</h1>
+                              <h2> Welcome to my portofolio site.</h2>
+                              <a href="{% static '/pdf/CV.pdf' %}"><button class="btn btn-dark btn-lg kecil spas">Download CV</button></a>
+                            </div>
+                          <div class="col-md-6 text-center">
+                              <img src="{% static '/image/mockup.svg' %}" class="ml-5 iphone-mock" width="400" alt="">
+                          </div>
+                  </div>
+            </div>
+              
+            </div>
+          </section>
+    <!-- Akhir Navbar dan Banner -->
+    
+    <!-- Project -->
+          <section id="project">
+            <h2 class="text-center besar">PROJECTS</h2>
+            <div class="container">
+              <div class="row">
+                {% for project in projects %}
+                <div class="col-md-4">
+                  <div class="card mt-5 mb-5 text-center">
+                    {% if project.url %}
+                    <a href="{{ project.url }}">
+                      <img src="{{ project.image.url }}" class="card-img-top">
+                    </a>
+                    {% else %}
+                
+                    <img src="{{ project.image.url }}" class="card-img-top">
+                    {% endif %}
+  
+                    <div class="card-body">
+                      <h3 class="card-title">{{ project.title }}</h3>
+                      <p class="card-text">{{ project.description }}</p>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </section>
+    <!-- Akhir Project -->
+
+    <!-- Skills -->
+      <section id="skills">
+        <div class="container">
+          <h2 class="text-center mt-5 besar skill">SKILLS</h2>
+
+          <div class="row">
+            
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="single-service">
+                <div class="content">
+                  <span class="icon">
+                    <i class="fab fa-uikit"></i>
+                  </span>
+                  <h3 class="title">UI/UX</h3>
+                  <p class="description">I have some experience in building wireframe, mockups, and prototype using Adobe XD or Figma.</p>
+                </div>
+                <span class="circle-before"></span>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="single-service">
+                <div class="content">
+                  <span class="icon">
+                    <i class="fas fa-file-code"></i>
+                  </span>
+                  <h3 class="title">Web Development</h3>
+                  <p class="description">Currently, i have some experience develop website using Django, Mern stack, and Laravel and i have some knowledge in rest API.</p>
+                </div>
+                <span class="circle-before"></span>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="single-service">
+                <div class="content">
+                  <span class="icon">
+                    <i class="fas fa-mobile"></i>
+                  </span>
+                  <h3 class="title">Mobile Development</h3>
+                  <p class="description">When i was in college, i have some experience in develop mobile application using Flutter or React Native.</p>
+                </div>
+                <span class="circle-before"></span>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="single-service">
+                <div class="content">
+                  <span class="icon">
+                    <i class="fas fa-desktop"></i>
+                  </span>
+                  <h3 class="title">Troubleshooting</h3>
+                  <p class="description">I have experience in troubleshooting, i could do troubleshooting in computer, networking, and in programming. I have helped the people closest to me to solve their problem.</p>
+                </div>
+                <span class="circle-before"></span>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="single-service">
+                <div class="content">
+                  <span class="icon">
+                    <i class="fas fa-wifi"></i>
+                  </span>
+                  <h3 class="title">Networking</h3>
+                  <p class="description">I have experience in networking, i could setup router, access point, CCTV, and i could make networking cable using crimping tools.</p>
+                </div>
+                <span class="circle-before"></span>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="single-service">
+                <div class="content">
+                  <span class="icon">
+                    <i class="fas fa-eye"></i>
+                  </span>
+                  <h3 class="title">Machine Learning</h3>
+                  <p class="description">I have experience in machine learning field in my undergraduate thesis, i created computer vision application to do segmentation of cursive handwriting and recognize it.</p>
+                </div>
+                <span class="circle-before"></span>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="single-service">
+                <div class="content">
+                  <span class="icon">
+                    <i class="fas fa-code-branch"></i>
+                  </span>
+                  <h3 class="title">Version Control</h3>
+                  <p class="description">I have experience to use version control such as Git.</p>
+                </div>
+                <span class="circle-before"></span>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="single-service">
+                <div class="content">
+                  <span class="icon">
+                    <i class="fas fa-cloud"></i>
+                  </span>
+                  <h3 class="title">Cloud Computing</h3>
+                  <p class="description">I have some knowledge in cloud computing like Alibaba, AWS, and Google Cloud.</p>
+                </div>
+                <span class="circle-before"></span>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="single-service">
+                <div class="content">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <h3 class="title">Databases</h3>
+                  <p class="description">Currently, i have experience in sql database such as MySql and no sql database such as Mongo DB and Firebase. </p>
+                </div>
+                <span class="circle-before"></span>
+              </div>
+            </div>
+
+        </div>
+      </section>
+    <!-- Akhir Skills -->
+
+    <!-- Contact -->
+      <section id="contact" class="d-flex justify-content-center">
+        <div class="container">
+          <h2 class="text-center mt-5 besar">CONTACT</h2>
+          <div class="kontak">
+            <a href="https://wa.me/6281932361415" target="_blank"><img src="{% static '/image/Whatsapp.png' %}" alt="Whatsapp"></a>
+            <a href="https://line.me/ti/p/~fakhri_w" target="_blank"><img src="{% static '/image/Line.png' %}" alt="Line"></a>
+            <a href="https://instagram.com/fakhri__w/" target="_blank"><img src="{% static '/image/Instagram.png' %}" alt="Instagram"></a>   
+            <a href="https://linkedin.com/in/fakhri-wicaksono" target="_blank"><img src="{% static '/image/Linkedin.png' %}" alt="Linkedin"></a> 
+          </div>
+        </div>
+      </section>
+    <!-- Akhir Contact -->
+
+    <!-- Footer -->
+    <div class="background mt-5">
+      <p class="warna">Made with <i class="fa fa-heart" aria-hidden="true" style="color:#be1931"></i> in Indonesia by Fakhri Wicaksono</p>
+    </div>
+    <!-- Akhir Footer -->
+
+
+    <!-- Bootstrap's Javascript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

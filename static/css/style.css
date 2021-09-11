@@ -1,0 +1,392 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;;
+}
+
+.logo{
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.logo img{
+    width: 125px;
+    height: 125px;
+}
+
+.nav-item{
+    margin: 0 20px;
+}
+
+#main{
+    background: url(../image/background.svg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.header-main{
+    margin-top: 80px ;
+}
+
+.header-main h1{
+    color: #fff;
+    font-weight: 500;
+    font-size: 2.2rem;
+}
+
+.header-main h2{
+    color: white;
+    font-weight: 400;
+    font-size: 2.1rem;
+}
+
+.deskripsi h1{
+    animation: type 3s steps(22);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 22ch;
+    border-right: 4px solid white;
+}
+
+.deskripsi h2{
+    animation: type_1 7s forwards steps(24);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 24ch;
+}
+
+.spas{
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+.besar{
+    font-size: 3rem;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+/* 
+akhir navbar */
+#skills{
+    background-color: #5a34fc;
+    margin-top: 50px;
+    padding: 100px 0;
+}
+
+.skill{
+    color: #fff;
+}
+
+.single-service {
+    position: relative;
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px 30px;
+    overflow: hidden;
+}
+
+.single-service .content {
+	position: relative;
+	z-index: 20;
+}
+
+.single-service .circle-before {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    transform: translate(40%, -40%);
+    width: 150px;
+    height: 150px;
+    background-color: #8236CB;
+    border: 6px solid #504f93;
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: 10;
+    transition: all .6s;
+}
+
+.single-service:hover .circle-before {
+	width: 100%;
+	height: 100%;
+	transform: none;
+	border: 0;
+	border-radius: 0;
+	opacity: 1;
+}
+
+.single-service .icon {
+	display: inline-block;
+	margin-bottom: 26px;
+    width: 70px;
+    height: 70px;
+    background-color: #7952B3;
+    border-radius: 5px;
+    line-height: 70px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    transition: all .3s;
+}
+
+.single-service:hover .icon {
+	background-color: #fff;
+	color: #7952B3;
+}
+
+.single-service .title {
+    margin-bottom: 18px;
+	font-weight: 700;
+    font-size: 23px;
+    transition: color .3s;
+}
+
+.single-service:hover .title {
+	color: #fff;
+}
+
+.single-service .description {
+    margin-bottom: 20px;
+    font-size: 14px;
+    transition: color .3s;
+}
+
+.single-service:hover .description {
+	color: #fff;
+}
+
+.single-service a {
+	position: relative;
+	font-size: 18px;
+    color: #202020;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color .3s;
+}
+
+.single-service:hover a {
+	color: #fff;
+}
+
+.single-service a:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background-color: #7952B3;
+	transition: background-color .3s;
+}
+
+.single-service:hover a:after {
+	background-color: #fff;
+}
+
+/* akhir skills */
+
+.kontak{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.kontak a{
+    font-size: 2rem;
+    padding: 5% 3%;
+    color: #5a34fc;
+    cursor: pointer;
+}
+
+.kontak a img{
+    width: 60px;
+    height: 60px;
+    transition: 1s ease-in-out;
+}
+
+.kontak a img:hover{
+ transform: scale(2,2);
+}
+
+/* akhir contact */
+
+.background{
+    background-color: #5a34fc;
+    height: 15vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.background .warna{
+    color: white;
+}
+/* Akhir Footer */
+
+
+@keyframes type{
+    0% {
+        width: 0ch;
+    }
+
+    100% {
+        width: 22ch;
+    }
+}
+
+@keyframes type_1{
+    0% {
+        width: 0ch;
+        color: rgb(255, 255, 255,0.0);
+        opacity: 0;
+    }
+
+    100% {
+        width: 24ch;
+        color: rgb(255, 255, 255,1);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .iphone-mock{
+        display: none;
+    }
+
+    .card{
+        margin: 20px 0;
+    }
+
+    .deskripsi h1{
+        font-size: 20px;
+    }
+
+    .deskripsi h2{
+        font-size: 16px;
+    }
+
+    .deskripsi .kecil{
+        padding:.25rem .5rem;
+        font-size:.875rem;
+        line-height:1.5;
+        border-radius:.2rem;
+    }
+
+    .deskripsi button{
+       margin: auto;
+       padding: auto;
+    }
+
+    #main{
+        height: 100vh;
+    }
+
+    .header-main{
+        margin-top: 12px;
+    }
+
+    .nav-item .nav-link{
+        font-size: 10px;
+    }
+
+    .background .warna{
+        font-size: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 768px){
+    .iphone-mock{
+        display: none;
+    }
+
+    .card{
+        margin: 20px 0;
+    }
+
+    .deskripsi h1{
+        font-size: 20px;
+    }
+
+    .deskripsi h2{
+        font-size: 16px;
+    }
+
+    .deskripsi .kecil{
+        padding:.25rem .5rem;
+        font-size:.875rem;
+        line-height:1.5;
+        border-radius:.2rem;
+    }
+
+    .deskripsi button{
+       margin: auto;
+       padding: auto;
+    }
+
+    #main{
+        height: 100vh;
+    }
+
+    .header-main{
+        margin-top: 12px;
+    }
+
+    .nav-item .nav-link{
+        font-size: 10px;
+    }
+
+    .background .warna{
+        font-size: 15px;
+    }
+
+
+}
+
+@media only screen and (max-width: 640px){
+    .iphone-mock{
+        display: none;
+    }
+
+    .card{
+        margin: 20px 0;
+    }
+
+    .deskripsi h1{
+        font-size: 20px;
+    }
+
+    .deskripsi h2{
+        font-size: 16px;
+    }
+
+    .deskripsi .kecil{
+        padding:.25rem .5rem;
+        font-size:.875rem;
+        line-height:1.5;
+        border-radius:.2rem;
+    }
+
+    .deskripsi button{
+       margin: auto;
+       padding: auto;
+    }
+
+    #main{
+        height: 100vh;
+    }
+
+    .header-main{
+        margin-top: 12px;
+    }
+
+    .nav-item .nav-link{
+        font-size: 10px;
+    }
+
+    .background .warna{
+        font-size: 15px;
+    }
+}
+

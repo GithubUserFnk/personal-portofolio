@@ -1,0 +1,245 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;;
+}
+
+.logo{
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.logo img{
+    width: 125px;
+    height: 125px;
+}
+
+.nav-item{
+    margin: 0 20px;
+}
+
+#main{
+    background: url(../image/background.svg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.header-main{
+    margin-top: 80px ;
+}
+
+.header-main h1{
+    color: #fff;
+    font-weight: 500;
+    font-size: 2.2rem;
+}
+
+.header-main h2{
+    color: white;
+    font-weight: 400;
+    font-size: 2.1rem;
+}
+
+.deskripsi h1{
+    animation: type 3s steps(22);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 9ch;
+    border-right: 4px solid white;
+}
+
+.deskripsi h2{
+    animation: type_1 7s forwards steps(24);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 17ch;
+}
+
+.spas{
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+.besar{
+    font-size: 3rem;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+/* 
+akhir navbar */
+
+.background{
+    background-color: #5a34fc;
+    height: 15vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.background .warna{
+    color: white;
+}
+/* Akhir Footer */
+
+@keyframes type{
+    0% {
+        width: 0ch;
+    }
+
+    100% {
+        width: 9ch;
+    }
+}
+
+@keyframes type_1{
+    0% {
+        width: 0ch;
+        color: rgb(255, 255, 255,0.0);
+        opacity: 0;
+    }
+
+    100% {
+        width: 17ch;
+        color: rgb(255, 255, 255,1);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .iphone-mock{
+        display: none;
+    }
+
+    .card{
+        margin: 20px 0;
+    }
+
+    .deskripsi h1{
+        font-size: 20px;
+    }
+
+    .deskripsi h2{
+        font-size: 16px;
+    }
+
+    .deskripsi .kecil{
+        padding:.25rem .5rem;
+        font-size:.875rem;
+        line-height:1.5;
+        border-radius:.2rem;
+    }
+
+    .deskripsi button{
+       margin: auto;
+       padding: auto;
+    }
+
+    #main{
+        height: 100vh;
+    }
+
+    .header-main{
+        margin-top: 12px;
+    }
+
+    .nav-item .nav-link{
+        font-size: 10px;
+    }
+
+    .background .warna{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .iphone-mock{
+        display: none;
+    }
+
+    .card{
+        margin: 20px 0;
+    }
+
+    .deskripsi h1{
+        font-size: 20px;
+    }
+
+    .deskripsi h2{
+        font-size: 16px;
+    }
+
+    .deskripsi .kecil{
+        padding:.25rem .5rem;
+        font-size:.875rem;
+        line-height:1.5;
+        border-radius:.2rem;
+    }
+
+    .deskripsi button{
+       margin: auto;
+       padding: auto;
+    }
+
+    #main{
+        height: 100vh;
+    }
+
+    .header-main{
+        margin-top: 12px;
+    }
+
+    .nav-item .nav-link{
+        font-size: 10px;
+    }
+
+    .background .warna{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .iphone-mock{
+        display: none;
+    }
+
+    .card{
+        margin: 20px 0;
+    }
+
+    .deskripsi h1{
+        font-size: 20px;
+    }
+
+    .deskripsi h2{
+        font-size: 16px;
+    }
+
+    .deskripsi .kecil{
+        padding:.25rem .5rem;
+        font-size:.875rem;
+        line-height:1.5;
+        border-radius:.2rem;
+    }
+
+    .deskripsi button{
+       margin: auto;
+       padding: auto;
+    }
+
+    #main{
+        height: 100vh;
+    }
+
+    .header-main{
+        margin-top: 12px;
+    }
+
+    .nav-item .nav-link{
+        font-size: 10px;
+    }
+
+    .background .warna{
+        font-size: 15px;
+    }
+}
+
+
